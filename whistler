@@ -1,0 +1,23 @@
+#hash iostream <include> whistler as main ui as explorer .exe. call for function 1*
+!*
+
+---
+layout: page
+permalink: thoughts/
+title: Thoughts
+icon: /images/thoughts.png
+published: false
+---
+
+<div class="posts-list">
+  {% for post in site.posts %}
+    {% if post.category != 'snippet' %}
+	    <a href="{{ post.url }}">
+	      <div class="posts-list-item">
+	        <h3>{{ post.title }}</h3>
+          <span>{{ post.content | strip_html | truncate: 140 }}</span>
+	      </div>
+	    </a>
+    {% endif %}
+  {% endfor %}
+</div>
